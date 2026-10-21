@@ -166,11 +166,11 @@ export default function HomePage() {
           Led by coaches who give their
           <br className="hidden md:block" /> time to the community
         </h2>
-        <div className="flex gap-5 overflow-x-auto px-5 scrollbar-none md:gap-7 md:pl-[220px] md:pr-10">
+        <div className="flex gap-5 overflow-x-auto px-5 scrollbar-none md:grid md:grid-cols-3 md:gap-7 md:overflow-visible md:pl-[220px] md:pr-10">
           {coaches.map((c) => (
-            <article key={c.name} className="flex w-[280px] shrink-0 flex-col gap-4 md:w-[340px]">
+            <article key={c.name} className="flex w-[280px] shrink-0 flex-col gap-4 md:w-auto md:shrink">
               <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-xl">
-                <Image src={c.photo} alt={c.name} fill sizes="340px" className="object-cover" />
+                <Image src={c.photo} alt={c.name} fill sizes="(min-width: 768px) 31vw, 340px" className="object-cover" />
               </div>
               <div className="flex flex-col gap-1.5">
                 <p className="text-small text-muted">{c.club}</p>
