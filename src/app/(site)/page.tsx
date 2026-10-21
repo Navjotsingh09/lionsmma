@@ -172,15 +172,15 @@ export default function HomePage() {
           </h2>
           <p className="text-small text-muted md:text-body">Drug and alcohol awareness camps, and free martial arts in schools.</p>
         </div>
-        <Carousel label="Punjab projects" auto={4500} className="scroll-pl-5 gap-5 px-5 md:scroll-pl-[220px] md:gap-8 md:pl-[220px] md:pr-10">
+        <Carousel label="Punjab projects" auto={4500} focus className="scroll-pl-5 gap-5 px-5 md:scroll-pl-[220px] md:gap-8 md:pl-[220px] md:pr-10">
           {punjabStories.map((s) => (
-            <Link key={s.title} href="/punjab-projects" className="group flex w-[320px] shrink-0 snap-start flex-col gap-4 md:w-[560px]">
+            <Link key={s.title} href="/punjab-projects" className="group flex w-[320px] shrink-0 snap-start flex-col gap-4 md:w-[600px]">
               <div className="relative aspect-[16/10] overflow-hidden rounded-xl">
-                <Image src={s.photo} alt="" fill sizes="560px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={s.photo} alt="" fill sizes="600px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
               <p className="text-small text-muted">Punjab projects</p>
-              <h3 className="text-h4">{s.title}</h3>
-              <p className="text-body text-muted">{s.body}</p>
+              <h3 className="text-h3">{s.title}</h3>
+              <p className="text-body text-muted md:text-lead">{s.body}</p>
             </Link>
           ))}
         </Carousel>

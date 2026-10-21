@@ -10,6 +10,7 @@ export function Carousel({
   progress = true,
   label,
   auto,
+  focus = false,
 }: {
   children: ReactNode;
   className?: string;
@@ -17,19 +18,51 @@ export function Carousel({
   label: string;
   /** Auto-advance interval in ms. Pauses on hover/focus/interaction. */
   auto?: number;
+  /** Dim every card except the one nearest the centre (Superpower focus effect). */
+  focus?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const count = Children.count(children);
   const paused = useRef(false);
+  const frame = useRef<number | null>(null);
 
-  const onScroll = () => {
+  const paint = useCallback(() => {
+    frame.current = null;
     const el = ref.current;
     if (!el) return;
     const first = el.firstElementChild as HTMLElement | null;
     const step = first ? first.offsetWidth + 32 : el.clientWidth;
-    setIndex(Math.min(count - 1, Math.round(el.scrollLeft / step)));
+    setIndex(Math.min(count - 1, Math.max(0, Math.round(el.scrollLeft / step))));
+    if (!focus) return;
+    // Fade each card by how far it sits from the snapped (active) card, which
+    // rests against the left gutter — so the active card is full and its
+    // neighbours dim, like Superpower's focus effect.
+    const w = first ? first.offsetWidth : el.clientWidth;
+    const padL = parseFloat(getComputedStyle(el).paddingLeft) || 0;
+    const focusX = el.scrollLeft + padL + w / 2;
+    for (const node of Array.from(el.children) as HTMLElement[]) {
+      const c = node.offsetLeft + node.offsetWidth / 2;
+      const d = Math.abs(c - focusX) / (w + 32);
+      node.style.opacity = Math.max(0.4, 1 - d * 0.6).toFixed(3);
+    }
+  }, [count, focus]);
+
+  const onScroll = () => {
+    if (frame.current == null) frame.current = requestAnimationFrame(paint);
   };
+
+  useEffect(() => {
+    if (!focus) return;
+    paint();
+    const el = ref.current;
+    window.addEventListener('resize', paint);
+    return () => {
+      window.removeEventListener('resize', paint);
+      if (frame.current != null) cancelAnimationFrame(frame.current);
+      if (el) for (const node of Array.from(el.children) as HTMLElement[]) node.style.opacity = '';
+    };
+  }, [focus, paint]);
 
   const go = useCallback((i: number) => {
     const el = ref.current;
@@ -61,7 +94,7 @@ export function Carousel({
 
   return (
     <div className="flex flex-col gap-8" onMouseEnter={pause} onMouseLeave={resume} onFocusCapture={pause} onBlurCapture={resume} onPointerDownCapture={pause}>
-      <div ref={ref} onScroll={onScroll} role="region" aria-label={label} tabIndex={0} className={cx('flex snap-x snap-mandatory overflow-x-auto scrollbar-none', className)}>
+      <div ref={ref} onScroll={onScroll} role="region" aria-label={label} tabIndex={0} className={cx('flex snap-x snap-mandatory overflow-x-auto scrollbar-none', focus && '[&>*]:transition-opacity [&>*]:duration-500', className)}>
         {children}
       </div>
       {progress && count > 1 && (
