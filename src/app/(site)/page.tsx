@@ -9,7 +9,7 @@ import { Accordion, ButtonLink, Check } from '@/components/ui';
 import { clubs } from '@/data/clubs';
 import { coaches, included, punjabStories, steps } from '@/data/site';
 
-const avatars = ['/photos/avatar-1.jpg', '/photos/avatar-2.jpg', '/photos/avatar-3.jpg'];
+const avatars = ['https://images.pexels.com/photos/5424766/pexels-photo-5424766.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/5424583/pexels-photo-5424583.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/5424574/pexels-photo-5424574.jpeg?auto=compress&cs=tinysrgb&w=1600'];
 
 function Avatars({ size = 26 }: { size?: number }) {
   return (
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className="flex flex-col gap-10 px-5 pb-16 md:flex-row md:justify-center md:gap-12 md:px-10 md:pt-10 md:pb-30">
         <div className="md:w-[450px]">
           <Gallery
-            photos={['/photos/grading-day.jpg', '/photos/kids-class.jpg', '/photos/teen-muay-thai.jpg', '/photos/womens-muay-thai.jpg', '/photos/coach-amarjit.jpg', '/photos/gurdwara-hall.jpg', '/photos/punjab-school-camp.jpg']}
+            photos={['https://images.pexels.com/photos/5999191/pexels-photo-5999191.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/6005463/pexels-photo-6005463.jpeg?auto=compress&cs=tinysrgb&w=1600']}
             overlay={
               <>
                 <div className="absolute top-4 left-4 flex flex-col rounded-xl bg-black/30 px-4 py-3.5 text-white glass md:top-5 md:left-5">

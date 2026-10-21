@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Lions MMA & Boxing',
     locale: 'en_GB',
-    images: [{ url: '/photos/hero-fighter.jpg', width: 1376, height: 768, alt: 'Lions MMA' }],
+    images: [{ url: 'https://images.pexels.com/photos/8745178/pexels-photo-8745178.jpeg?auto=compress&cs=tinysrgb&w=1600', width: 1376, height: 768, alt: 'Lions MMA' }],
   },
 };
 

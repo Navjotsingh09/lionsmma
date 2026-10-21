@@ -18,7 +18,7 @@ export default function DonatePage() {
       <div className="flex flex-col md:flex-row md:gap-16 md:pr-10 md:pb-24 md:pl-2">
         <div className="px-2 md:w-[700px] md:shrink-0 md:px-0">
           <div className="relative h-[300px] overflow-hidden rounded-[14px] md:h-[760px] md:rounded-2xl">
-            <Image src="/photos/punjab-gym.jpg" alt="Teenagers training with a Sikh coach in a gym in Punjab" fill preload sizes="(min-width: 768px) 700px, 100vw" className="object-cover" />
+            <Image src="https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Teenagers training with a Sikh coach in a gym in Punjab" fill preload sizes="(min-width: 768px) 700px, 100vw" className="object-cover" />
             <div aria-hidden="true" className="absolute inset-x-0 bottom-0 hidden h-1/2 bg-gradient-to-t from-black/80 to-transparent md:block" />
             <dl className="absolute inset-x-10 bottom-10 hidden grid-cols-3 gap-3 md:grid">
               {[

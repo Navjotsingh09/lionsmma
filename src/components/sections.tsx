@@ -59,7 +59,7 @@ export function PhotoHero({
 
 export function ClosingCTA() {
   return (
-    <PhotoHero photo="/photos/girl-punch.jpg" alt="A young Sikh girl throwing a punch with orange boxing gloves" height="md:h-[720px]" mobileHeight="h-[560px]" className="pb-2" mobilePosition="object-[75%_center]">
+    <PhotoHero photo="https://images.pexels.com/photos/11391876/pexels-photo-11391876.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="A young Sikh girl throwing a punch with orange boxing gloves" height="md:h-[720px]" mobileHeight="h-[560px]" className="pb-2" mobilePosition="object-[75%_center]">
       <div className="flex max-w-[600px] flex-col gap-4 md:gap-5 md:pb-24">
         <p className="text-tiny text-white/85">Free first class at every club</p>
         <h2 className="text-display-m md:text-display">

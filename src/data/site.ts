@@ -20,7 +20,7 @@ export const goals = [
     title: 'Sikhi',
     heading: 'Train where you feel at home',
     body: 'Every Lions MMA club runs from Gurdwara premises — the Gurdwara itself, its gym or its community centre. Young Sikhs learn self-defence in a relaxed, family setting, and keep coming back to the Gurdwara.',
-    photo: '/photos/gurdwara-hall.jpg',
+    photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600',
     faqs: [
       { q: 'Why do we train at the Gurdwara?', a: 'It gives Sikh youth a place to train among fellow Sikh brothers and sisters, somewhere they feel comfortable — and it encourages them to visit the Gurdwara.' },
       { q: 'Is it right for complete beginners?', a: 'Yes. Learning martial arts is something everyone can do. Classes are split by age and level.' },
@@ -31,7 +31,7 @@ export const goals = [
     title: 'Martial arts',
     heading: 'Self-defence is part of Sikh history',
     body: 'From the wrestling introduced by Guru Angad Dev Ji and the emergence of Shastar Vidya, to the Saint Soldier of Guru Hargobind Sahib Ji and the Khalsa Panth of Guru Gobind Singh Ji.',
-    photo: '/photos/teen-muay-thai.jpg',
+    photo: 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600',
     faqs: [
       { q: 'Which martial arts do you teach?', a: 'Muay Thai, Jiu-Jitsu, boxing and MMA, plus CrossFit at Huddersfield. Each club runs its own timetable.' },
       { q: 'Do I have to compete?', a: 'No. Train to whatever level suits you — to compete as a fighter, for fitness or for personal self-defence.' },
@@ -42,7 +42,7 @@ export const goals = [
     title: 'Healthy lifestyle',
     heading: 'Confidence, discipline and self-esteem',
     body: 'A good workout, traditional training and a family atmosphere. Students follow five values: spirit, dedication, loyalty, an open mind and a willingness to train.',
-    photo: '/photos/womens-muay-thai.jpg',
+    photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600',
     faqs: [
       { q: 'Is there a class for women?', a: 'Yes — women’s Muay Thai runs on Thursdays at Willenhall, 6:00–7:00pm.' },
       { q: 'Can parents and children both train?', a: 'Yes. Many clubs run kids and adults classes on the same evening.' },
@@ -53,7 +53,7 @@ export const goals = [
     title: 'Charity work',
     heading: 'Inspiring the youth of Punjab',
     body: 'After two successful years of the Fun Run/Walk, the Lions MMA team ran Sikhi, MMA and drug & alcohol awareness camps at schools in Punjab, reaching thousands of students.',
-    photo: '/photos/punjab-school-camp.jpg',
+    photo: 'https://images.pexels.com/photos/6005463/pexels-photo-6005463.jpeg?auto=compress&cs=tinysrgb&w=1600',
     faqs: [
       { q: 'How can I help?', a: 'Volunteer your time or skills, or donate. Every bit helps us reach more children.' },
       { q: 'What happens next?', a: 'We plan to reach over 5,000 children next year, with full-time support for children dealing with substance abuse.' },
@@ -62,10 +62,10 @@ export const goals = [
 ];
 
 export const steps = [
-  { photo: '/photos/gurdwara-hall.jpg', title: 'Find your club', body: 'Nine clubs, all on Gurdwara premises. Pick the one nearest you.' },
-  { photo: '/photos/kids-class.jpg', title: 'Try a free class', body: 'Book online in a minute. No kit and no contract — just come as you are.' }, // CONFIRM: free first class
-  { photo: '/photos/teen-muay-thai.jpg', title: 'Train every week', body: 'Muay Thai, Jiu-Jitsu, boxing and MMA, split by age and level.' },
-  { photo: '/photos/grading-day.jpg', title: 'Grade and grow', body: 'Gradings mark every step. Confidence and discipline follow.' }, // CONFIRM: gradings
+  { photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Find your club', body: 'Nine clubs, all on Gurdwara premises. Pick the one nearest you.' },
+  { photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Try a free class', body: 'Book online in a minute. No kit and no contract — just come as you are.' }, // CONFIRM: free first class
+  { photo: 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Train every week', body: 'Muay Thai, Jiu-Jitsu, boxing and MMA, split by age and level.' },
+  { photo: 'https://images.pexels.com/photos/5999191/pexels-photo-5999191.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Grade and grow', body: 'Gradings mark every step. Confidence and discipline follow.' }, // CONFIRM: gradings
 ];
 
 // CONFIRM: rows marked * were added in the design.
@@ -82,16 +82,16 @@ export const included = [
 ] as const;
 
 export const coaches = [
-  { photo: '/photos/coach-amarjit.jpg', club: 'Leicester · Boxing', name: 'Amarjit Singh', role: 'Boxing coach, all levels', body: 'Runs boxing on Wednesdays, 6:00–7:30pm at Gurdwara Sri Dasmesh Sahib.', href: '/clubs/leicester' },
-  { photo: '/photos/coach-sandeep.jpg', club: 'Leicester · Kids MMA', name: 'Sandeep Singh', role: 'Kids MMA coach', body: 'Runs Kids MMA on Saturdays, 2:00–3:30pm at Gurdwara Sri Dasmesh Sahib.', href: '/clubs/leicester' },
-  { photo: '/photos/coach-charandeep.jpg', club: 'Bradford · Kids Muay Thai', name: 'Charandeep Singh', role: 'Club contact, Bradford', body: 'Kids Muay Thai on Thursdays, 6:30–7:30pm at Gurdwara Singh Sabha.', href: '/clubs/bradford' },
+  { photo: 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600', club: 'Leicester · Boxing', name: 'Amarjit Singh', role: 'Boxing coach, all levels', body: 'Runs boxing on Wednesdays, 6:00–7:30pm at Gurdwara Sri Dasmesh Sahib.', href: '/clubs/leicester' },
+  { photo: 'https://images.pexels.com/photos/17474771/pexels-photo-17474771.jpeg?auto=compress&cs=tinysrgb&w=1600', club: 'Leicester · Kids MMA', name: 'Sandeep Singh', role: 'Kids MMA coach', body: 'Runs Kids MMA on Saturdays, 2:00–3:30pm at Gurdwara Sri Dasmesh Sahib.', href: '/clubs/leicester' },
+  { photo: 'https://images.pexels.com/photos/8611370/pexels-photo-8611370.jpeg?auto=compress&cs=tinysrgb&w=1600', club: 'Bradford · Kids Muay Thai', name: 'Charandeep Singh', role: 'Club contact, Bradford', body: 'Kids Muay Thai on Thursdays, 6:30–7:30pm at Gurdwara Singh Sabha.', href: '/clubs/bradford' },
 ];
 
 export const punjabStories = [
-  { photo: '/photos/punjab-school-camp.jpg', title: '1,000+ students reached', body: 'Sikhi, MMA and drug & alcohol awareness camps at schools across Punjab.' },
-  { photo: '/photos/punjab-gym.jpg', title: 'Our first gym in Punjab', body: 'Lions MMA opened its very first gym, and runs free martial arts sessions in schools.' },
-  { photo: '/photos/fun-run.jpg', title: 'Two years of fun runs', body: 'Families in the UK ran and walked to fund the first camps.' },
-  { photo: '/photos/kids-class.jpg', title: '52 schools', body: 'Drugs education camps for children from 52 schools.' },
+  { photo: 'https://images.pexels.com/photos/6005463/pexels-photo-6005463.jpeg?auto=compress&cs=tinysrgb&w=1600', title: '1,000+ students reached', body: 'Sikhi, MMA and drug & alcohol awareness camps at schools across Punjab.' },
+  { photo: 'https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Our first gym in Punjab', body: 'Lions MMA opened its very first gym, and runs free martial arts sessions in schools.' },
+  { photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Two years of fun runs', body: 'Families in the UK ran and walked to fund the first camps.' },
+  { photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', title: '52 schools', body: 'Drugs education camps for children from 52 schools.' },
 ];
 
 export const punjabDone = [
@@ -113,19 +113,19 @@ export const helpText =
   'We’re looking for volunteers who can help us reach and support thousands of children in Punjab. Whatever your field of work or skills, there is something we can all do. Your donations help us work with more children and run more camps.';
 
 export const tiles = [
-  { photo: '/photos/womens-muay-thai.jpg', title: 'Women’s Muay Thai', place: 'Willenhall', href: '/clubs/willenhall' },
-  { photo: '/photos/kids-class.jpg', title: 'Kids Muay Thai', place: 'Tividale', href: '/clubs/tividale' },
-  { photo: '/photos/grading-day.jpg', title: 'Kids Muay Thai', place: 'Wolverhampton', href: '/clubs/wolverhampton' },
-  { photo: '/photos/coach-amarjit.jpg', title: 'Boxing, all levels', place: 'Leicester', href: '/clubs/leicester' },
-  { photo: '/photos/teen-muay-thai.jpg', title: 'Adults Muay Thai', place: 'Hitchin', href: '/clubs/hitchin' },
-  { photo: '/photos/gurdwara-hall.jpg', title: 'Kids Muay Thai', place: 'Bradford', href: '/clubs/bradford' },
-  { photo: '/photos/adults-jiu-jitsu.jpg', title: 'Adults Jiu-Jitsu', place: 'Capehill Smethwick', href: '/clubs/capehill-smethwick' },
-  { photo: '/photos/punjab-gym.jpg', title: 'Free classes', place: 'Punjab', href: '/punjab-projects' },
+  { photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Women’s Muay Thai', place: 'Willenhall', href: '/clubs/willenhall' },
+  { photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Tividale', href: '/clubs/tividale' },
+  { photo: 'https://images.pexels.com/photos/5999191/pexels-photo-5999191.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Wolverhampton', href: '/clubs/wolverhampton' },
+  { photo: 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Boxing, all levels', place: 'Leicester', href: '/clubs/leicester' },
+  { photo: 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Adults Muay Thai', place: 'Hitchin', href: '/clubs/hitchin' },
+  { photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Bradford', href: '/clubs/bradford' },
+  { photo: 'https://images.pexels.com/photos/5424668/pexels-photo-5424668.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Adults Jiu-Jitsu', place: 'Capehill Smethwick', href: '/clubs/capehill-smethwick' },
+  { photo: 'https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Free classes', place: 'Punjab', href: '/punjab-projects' },
 ];
 
 export const disciplines = [
   {
-    photo: '/photos/teen-muay-thai.jpg',
+    photo: 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Muay Thai',
     who: 'Kids and adults · Beginner to advanced',
     body: 'The art of eight limbs — punches, kicks, knees and elbows. Our most taught class, from first-timers to advanced students.',
@@ -133,7 +133,7 @@ export const disciplines = [
     clubs: ['bradford', 'capehill-smethwick', 'hitchin', 'huddersfield', 'willenhall', 'wolverhampton', 'tividale'],
   },
   {
-    photo: '/photos/womens-muay-thai.jpg',
+    photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Women’s Muay Thai',
     who: 'Women · All levels',
     body: 'A welcoming women-only class to learn Muay Thai, build fitness and feel confident defending yourself.',
@@ -141,7 +141,7 @@ export const disciplines = [
     clubs: ['willenhall'],
   },
   {
-    photo: '/photos/adults-jiu-jitsu.jpg',
+    photo: 'https://images.pexels.com/photos/5424668/pexels-photo-5424668.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Jiu-Jitsu',
     who: 'Adults · All levels',
     body: 'Ground-based grappling: control, escapes and submissions. Brilliant for self-defence and fitness.',
@@ -149,7 +149,7 @@ export const disciplines = [
     clubs: ['capehill-smethwick'],
   },
   {
-    photo: '/photos/coach-amarjit.jpg',
+    photo: 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Boxing',
     who: 'All levels',
     body: 'Footwork, combinations and pad work, coached step by step in a friendly, disciplined room.',
@@ -157,7 +157,7 @@ export const disciplines = [
     clubs: ['leicester'],
   },
   {
-    photo: '/photos/kids-class.jpg',
+    photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Kids MMA',
     who: 'Kids',
     body: 'Striking and grappling for children, with games, discipline and plenty of confidence-building.',
@@ -165,7 +165,7 @@ export const disciplines = [
     clubs: ['leicester'],
   },
   {
-    photo: '/photos/adults-jiu-jitsu.jpg',
+    photo: 'https://images.pexels.com/photos/5424668/pexels-photo-5424668.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'CrossFit',
     who: 'Adults · All levels',
     body: 'A tough, scalable workout to build strength and stamina alongside your martial arts.',

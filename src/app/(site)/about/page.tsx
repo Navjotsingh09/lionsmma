@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PhotoHero photo="/photos/gurdwara-hall.jpg" alt="Children in patkas sitting on mats listening to a coach, in a hall with a mural of Sikh warriors" height="md:h-[640px]" mobileHeight="h-[460px]" fade="bt" preload mobilePosition="object-[60%_center]">
+      <PhotoHero photo="https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Children in patkas sitting on mats listening to a coach, in a hall with a mural of Sikh warriors" height="md:h-[640px]" mobileHeight="h-[460px]" fade="bt" preload mobilePosition="object-[60%_center]">
         <div className="flex flex-col gap-3 md:gap-4">
           <p className="text-tiny text-white/85 md:text-small">About Lions MMA</p>
           <h1 className="text-display-m md:text-display">
@@ -97,8 +97,8 @@ export default function AboutPage() {
         <h2 className="text-h1-m md:text-h1">Ready to help?</h2>
         <div className="grid gap-3 md:grid-cols-2 md:gap-4">
           {[
-            { href: '/volunteer', photo: '/photos/fun-run.jpg', title: 'Volunteer', body: 'Whatever your skills, there’s something you can do to support thousands of children in Punjab.', cta: 'Join today' },
-            { href: '/donate', photo: '/photos/punjab-gym.jpg', title: 'Donate', body: 'Any amount helps us run more camps and work with more children.', cta: 'Donate today' },
+            { href: '/volunteer', photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Volunteer', body: 'Whatever your skills, there’s something you can do to support thousands of children in Punjab.', cta: 'Join today' },
+            { href: '/donate', photo: 'https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Donate', body: 'Any amount helps us run more camps and work with more children.', cta: 'Donate today' },
           ].map((c) => (
             <Link key={c.href} href={c.href} className="group relative flex h-[260px] items-end overflow-hidden rounded-2xl text-white md:h-[420px]">
               <Image src={c.photo} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />

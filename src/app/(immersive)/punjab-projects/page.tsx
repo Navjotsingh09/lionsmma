@@ -13,7 +13,7 @@ export default function PunjabPage() {
   return (
     <>
       <section className="relative flex h-[640px] items-end overflow-hidden bg-black text-white md:h-[860px]">
-        <Image src="/photos/punjab-school-camp.jpg" alt="A Sikh coach demonstrating a guard stance to rows of school children in Punjab" fill preload sizes="100vw" className="object-cover" />
+        <Image src="https://images.pexels.com/photos/6005463/pexels-photo-6005463.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="A Sikh coach demonstrating a guard stance to rows of school children in Punjab" fill preload sizes="100vw" className="object-cover" />
         <div aria-hidden="true" className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.75) 25%, rgba(0,0,0,0) 65%)' }} />
         <div className="relative flex max-w-[880px] flex-col gap-4 p-5 md:gap-[18px] md:px-12 md:pb-14">
           <p className="flex items-center gap-2 text-small">
@@ -53,13 +53,13 @@ export default function PunjabPage() {
 
       <div className="grid gap-2.5 px-2 md:grid-cols-4">
         <div className="relative h-[260px] overflow-hidden rounded-xl md:col-span-2 md:h-[420px]">
-          <Image src="/photos/punjab-gym.jpg" alt="Teenagers training with a Sikh coach in a small gym in Punjab" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Teenagers training with a Sikh coach in a small gym in Punjab" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="relative hidden h-[420px] overflow-hidden rounded-xl md:block">
-          <Image src="/photos/fun-run.jpg" alt="Families in orange T-shirts on a charity fun run" fill sizes="25vw" className="object-cover" />
+          <Image src="https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Families in orange T-shirts on a charity fun run" fill sizes="25vw" className="object-cover" />
         </div>
         <div className="relative hidden h-[420px] overflow-hidden rounded-xl md:block">
-          <Image src="/photos/kids-class.jpg" alt="Children practising martial arts on mats" fill sizes="25vw" className="object-cover" />
+          <Image src="https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Children practising martial arts on mats" fill sizes="25vw" className="object-cover" />
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default function PunjabPage() {
 
       <div className="px-2 pb-2">
         <section className="relative flex min-h-[520px] items-end overflow-hidden rounded-2xl bg-black text-white md:h-[600px] md:items-center">
-          <Image src="/photos/fun-run.jpg" alt="" fill sizes="100vw" className="object-cover" />
+          <Image src="https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" fill sizes="100vw" className="object-cover" />
           <div aria-hidden="true" className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 80%)' }} />
           <div aria-hidden="true" className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 50%, rgba(0,0,0,.1) 100%)' }} />
           <div className="relative flex max-w-[560px] flex-col gap-4 p-5 md:gap-[18px] md:p-12">
