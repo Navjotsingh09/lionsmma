@@ -43,7 +43,7 @@ export const goals = [
     title: 'Healthy lifestyle',
     heading: 'Confidence, discipline and self-esteem',
     body: 'A good workout, traditional training and a family atmosphere. Students follow five values: spirit, dedication, loyalty, an open mind and a willingness to train.',
-    photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: '/photos/goal-confidence.jpg',
     faqs: [
       { q: 'Is there a class for women?', a: 'Yes — women’s Muay Thai runs on Thursdays at Willenhall, 6:00–7:00pm.' },
       { q: 'Can parents and children both train?', a: 'Yes. Many clubs run kids and adults classes on the same evening.' },
@@ -54,7 +54,7 @@ export const goals = [
     title: 'Charity work',
     heading: 'Inspiring the youth of Punjab',
     body: 'After two successful years of the Fun Run/Walk, the Lions MMA team ran Sikhi, MMA and drug & alcohol awareness camps at schools in Punjab, reaching thousands of students.',
-    photo: 'https://images.pexels.com/photos/5670632/pexels-photo-5670632.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: '/photos/goal-youth.jpg',
     faqs: [
       { q: 'How can I help?', a: 'Volunteer your time or skills, or donate. Every bit helps us reach more children.' },
       { q: 'What happens next?', a: 'We plan to reach over 5,000 children next year, with full-time support for children dealing with substance abuse.' },
