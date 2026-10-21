@@ -45,7 +45,7 @@ export const clubs: Club[] = [
     postcode: 'BD3 9HD',
     phone: '07858 607577',
     contact: 'Charandeep Singh',
-    photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600',
     lat: 53.79,
     lng: -1.735,
     sessions: [{ day: 'Thursday', start: '18:30', end: '19:30', name: 'Kids Muay Thai', group: 'Kids', discipline: 'Muay Thai' }],
@@ -89,7 +89,7 @@ export const clubs: Club[] = [
     town: 'Hitchin',
     postcode: 'SG4 0TP',
     phone: '07742 772238',
-    photo: 'https://images.pexels.com/photos/8611942/pexels-photo-8611942.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: 'https://images.pexels.com/photos/13808098/pexels-photo-13808098.jpeg?auto=compress&cs=tinysrgb&w=1600',
     lat: 51.96,
     lng: -0.27,
     sessions: [
@@ -105,7 +105,7 @@ export const clubs: Club[] = [
     town: 'Huddersfield',
     postcode: 'HD1 6JT',
     phone: '07908 550413',
-    photo: 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: 'https://images.pexels.com/photos/17474771/pexels-photo-17474771.jpeg?auto=compress&cs=tinysrgb&w=1600',
     lat: 53.659,
     lng: -1.786,
     sessions: [
@@ -159,7 +159,7 @@ export const clubs: Club[] = [
     town: 'Wolverhampton',
     postcode: 'WV2 4AJ',
     phone: '07967 205496',
-    photo: 'https://images.pexels.com/photos/5999191/pexels-photo-5999191.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: 'https://images.pexels.com/photos/5670632/pexels-photo-5670632.jpeg?auto=compress&cs=tinysrgb&w=1600',
     lat: 52.576,
     lng: -2.13,
     sessions: [

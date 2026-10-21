@@ -13,7 +13,7 @@ export default function VolunteerPage() {
     <div className="flex flex-col md:flex-row md:gap-16 md:pr-10 md:pb-30 md:pl-2">
       <div className="px-2 md:w-[640px] md:shrink-0 md:px-0">
         <div className="relative h-[300px] overflow-hidden rounded-[14px] md:sticky md:top-2 md:h-[calc(100svh-16px)] md:max-h-[900px] md:rounded-2xl">
-          <Image src="https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Families in orange T-shirts on a charity fun run" fill preload sizes="(min-width: 768px) 640px, 100vw" className="object-cover" />
+          <Image src="https://images.pexels.com/photos/5424574/pexels-photo-5424574.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Families in orange T-shirts on a charity fun run" fill preload sizes="(min-width: 768px) 640px, 100vw" className="object-cover" />
           <div className="absolute inset-x-10 bottom-10 hidden flex-col gap-1.5 rounded-xl bg-black/35 px-[18px] py-4 text-white glass md:flex">
             <span className="text-small text-white/80">Fun Run/Walk</span>
             <span className="text-lead">Two successful years of fun runs funded our first camps in Punjab.</span>

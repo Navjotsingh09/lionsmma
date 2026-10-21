@@ -185,7 +185,7 @@ export function BookForm() {
 
         <aside className="flex flex-col gap-[18px] self-start rounded-2xl bg-surface p-5 md:sticky md:top-6 md:w-[420px] md:p-6">
           <div className="relative aspect-[372/200] overflow-hidden rounded-[10px]">
-            <Image src={club?.photo ?? 'https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?auto=compress&cs=tinysrgb&w=1600'} alt="" fill sizes="420px" className="object-cover" />
+            <Image src={club?.photo ?? 'https://images.pexels.com/photos/5424583/pexels-photo-5424583.jpeg?auto=compress&cs=tinysrgb&w=1600'} alt="" fill sizes="420px" className="object-cover" />
           </div>
           <p className="text-small text-muted">Your free class</p>
           <p className="text-h4">{session ? `${session.name}${session.detail ? ` · ${session.detail}` : ''}` : club ? 'Choose a class' : 'Choose a club'}</p>

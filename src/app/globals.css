@@ -68,6 +68,12 @@
   summary::-webkit-details-marker {
     display: none;
   }
+  /* One consistent grade across every photo so the mixed stock reads as a
+     single, dark, clean brand — slightly cooler, desaturated and deeper. */
+  img.object-cover,
+  video.object-cover {
+    filter: saturate(0.82) contrast(1.06) brightness(0.88);
+  }
 }
 
 @utility scrollbar-none {
