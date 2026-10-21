@@ -13,7 +13,7 @@ export default function PunjabPage() {
   return (
     <>
       <section className="relative flex h-[640px] items-end overflow-hidden bg-black text-white md:h-[860px]">
-        <Image src="https://images.pexels.com/photos/8745178/pexels-photo-8745178.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="A Sikh coach demonstrating a guard stance to rows of school children in Punjab" fill preload sizes="100vw" className="object-cover" />
+        <Image src="/photos/punjab-hero.webp" alt="Illustration of a Punjabi Sikh boxer celebrating amid doves, wheat fields and Punjab architecture" fill preload sizes="100vw" className="object-cover" />
         <div aria-hidden="true" className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.75) 25%, rgba(0,0,0,0) 65%)' }} />
         <div className="relative flex max-w-[880px] flex-col gap-4 p-5 md:gap-[18px] md:px-12 md:pb-14">
           <p className="flex items-center gap-2 text-small">
