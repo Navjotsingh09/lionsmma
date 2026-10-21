@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PhotoHero photo="https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Children in patkas sitting on mats listening to a coach, in a hall with a mural of Sikh warriors" height="md:h-[640px]" mobileHeight="h-[460px]" fade="bt" preload mobilePosition="object-[60%_center]">
+      <PhotoHero photo="https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Children in patkas sitting on mats listening to a coach, in a hall with a mural of Sikh warriors" height="md:h-[640px]" mobileHeight="h-[460px]" fade="bt" preload mobilePosition="object-center" video="/videos/about-hero.mp4">
         <div className="flex flex-col gap-3 md:gap-4">
           <p className="text-tiny text-white/85 md:text-small">About Lions MMA</p>
           <h1 className="text-display-m md:text-display">
