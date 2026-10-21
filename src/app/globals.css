@@ -123,3 +123,14 @@
     transform: none;
   }
 }
+
+/* Continuous logo/name ticker. The track holds two identical copies, so
+   shifting by -50% loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

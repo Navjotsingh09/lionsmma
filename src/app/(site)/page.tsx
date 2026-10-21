@@ -81,15 +81,17 @@ export default function HomePage() {
         <p className="flex items-center gap-2.5 text-tiny md:text-small">
           <Avatars /> Trusted by families at Gurdwaras across the UK
         </p>
-        <ul className="flex max-w-[1360px] flex-wrap justify-center gap-x-4 gap-y-1.5 md:gap-x-10">
-          {clubs.map((c) => (
-            <li key={c.slug}>
-              <Link href={`/clubs/${c.slug}`} className="text-small text-muted/70 transition-colors hover:text-ink md:text-lead">
-                {c.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="group w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <ul className="flex w-max animate-[marquee_34s_linear_infinite] gap-x-10 group-hover:[animation-play-state:paused] md:gap-x-16">
+            {[...clubs, ...clubs].map((c, i) => (
+              <li key={`${c.slug}-${i}`} className="shrink-0" aria-hidden={i >= clubs.length}>
+                <Link href={`/clubs/${c.slug}`} className="text-small whitespace-nowrap text-muted/70 transition-colors hover:text-ink md:text-lead">
+                  {c.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* How it works */}
