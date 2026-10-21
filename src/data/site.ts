@@ -66,7 +66,7 @@ export const steps = [
   { photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Find your club', body: 'Nine clubs, all on Gurdwara premises. Pick the one nearest you.' },
   { photo: 'https://images.pexels.com/photos/5670635/pexels-photo-5670635.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Try a free class', body: 'Book online in a minute. No kit and no contract — just come as you are.' }, // CONFIRM: free first class
   { photo: 'https://images.pexels.com/photos/13808098/pexels-photo-13808098.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Train every week', body: 'Muay Thai, Jiu-Jitsu, boxing and MMA, split by age and level.' },
-  { photo: 'https://images.pexels.com/photos/5670632/pexels-photo-5670632.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Grade and grow', body: 'Gradings mark every step. Confidence and discipline follow.' }, // CONFIRM: gradings
+  { photo: '/photos/goal-youth.jpg', title: 'Grade and grow', body: 'Gradings mark every step. Confidence and discipline follow.' }, // CONFIRM: gradings
 ];
 
 // CONFIRM: rows marked * were added in the design.
@@ -114,9 +114,9 @@ export const helpText =
   'We’re looking for volunteers who can help us reach and support thousands of children in Punjab. Whatever your field of work or skills, there is something we can all do. Your donations help us work with more children and run more camps.';
 
 export const tiles = [
-  { photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Women’s Muay Thai', place: 'Willenhall', href: '/clubs/willenhall' },
+  { photo: 'https://images.pexels.com/photos/7991709/pexels-photo-7991709.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Women’s Muay Thai', place: 'Willenhall', href: '/clubs/willenhall' },
   { photo: 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Tividale', href: '/clubs/tividale' },
-  { photo: 'https://images.pexels.com/photos/5670632/pexels-photo-5670632.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Wolverhampton', href: '/clubs/wolverhampton' },
+  { photo: 'https://images.pexels.com/photos/6720455/pexels-photo-6720455.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Wolverhampton', href: '/clubs/wolverhampton' },
   { photo: 'https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Boxing, all levels', place: 'Leicester', href: '/clubs/leicester' },
   { photo: 'https://images.pexels.com/photos/13808098/pexels-photo-13808098.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Adults Muay Thai', place: 'Hitchin', href: '/clubs/hitchin' },
   { photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Kids Muay Thai', place: 'Bradford', href: '/clubs/bradford' },
@@ -134,7 +134,7 @@ export const disciplines = [
     clubs: ['bradford', 'capehill-smethwick', 'hitchin', 'huddersfield', 'willenhall', 'wolverhampton', 'tividale'],
   },
   {
-    photo: 'https://images.pexels.com/photos/8612065/pexels-photo-8612065.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    photo: 'https://images.pexels.com/photos/7991709/pexels-photo-7991709.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Women’s Muay Thai',
     who: 'Women · All levels',
     body: 'A welcoming women-only class to learn Muay Thai, build fitness and feel confident defending yourself.',
