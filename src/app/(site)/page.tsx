@@ -3,19 +3,27 @@ import Link from 'next/link';
 import { Carousel } from '@/components/carousel';
 import { Gallery } from '@/components/gallery';
 import { GoalsScroller } from '@/components/goals-scroller';
-import { Icon } from '@/components/icons';
+import { Icon, type IconName } from '@/components/icons';
 import { ClosingCTA, PhotoHero, TilesRow } from '@/components/sections';
 import { Accordion, ButtonLink, Check } from '@/components/ui';
 import { clubs } from '@/data/clubs';
 import { coaches, included, punjabStories, steps } from '@/data/site';
 
+const includedIcons: IconName[] = ['check', 'calendar', 'users', 'user', 'shield', 'heart', 'pin', 'shield', 'users'];
+
 const avatars = ['https://images.pexels.com/photos/5424766/pexels-photo-5424766.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/5424583/pexels-photo-5424583.jpeg?auto=compress&cs=tinysrgb&w=1600', 'https://images.pexels.com/photos/5424574/pexels-photo-5424574.jpeg?auto=compress&cs=tinysrgb&w=1600'];
 
-function Avatars({ size = 26 }: { size?: number }) {
+function Avatars({ size = 28 }: { size?: number }) {
   return (
     <span className="flex">
       {avatars.map((a, i) => (
-        <Image key={a} src={a} alt="" width={size} height={size} className="rounded-full border-2 border-white" style={{ marginLeft: i ? -8 : 0 }} />
+        <span
+          key={a}
+          className="relative shrink-0 overflow-hidden rounded-full border-2 border-white shadow-[0_1px_3px_rgba(0,0,0,0.15)]"
+          style={{ width: size, height: size, marginLeft: i ? -10 : 0 }}
+        >
+          <Image src={a} alt="" fill sizes={`${size}px`} className="object-cover" />
+        </span>
       ))}
     </span>
   );
@@ -125,15 +133,31 @@ export default function HomePage() {
           Everything your family needs,
           <br className="hidden md:block" /> starting with a free class
         </h2>
-        <dl className="w-full max-w-[480px] py-3">
-          {included.map(([a, b], i) => (
-            <div key={a} className={`flex rounded px-2.5 py-[7px] text-small ${i % 2 === 0 ? 'bg-surface' : ''}`}>
-              <dt className="w-[140px] shrink-0 md:w-[170px]">{a.replace('*', '')}</dt>
-              <dd className="text-muted">{b}</dd>
-            </div>
-          ))}
+        <dl className="grid w-full max-w-[1040px] grid-cols-1 gap-3 pt-6 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
+          {included.map(([a, b], i) => {
+            const isNew = a.includes('*');
+            return (
+              <div
+                key={a}
+                className="flex items-start gap-4 rounded-2xl border border-line bg-surface p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-ink/10 hover:bg-white hover:shadow-[0_12px_28px_-16px_rgba(0,0,0,0.25)] md:p-6"
+              >
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-black text-white">
+                  <Icon name={includedIcons[i]} size={18} />
+                </span>
+                <div className="flex flex-col gap-0.5 pt-0.5">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <dt className="text-body">{a.replace('*', '')}</dt>
+                    {isNew && <span className="rounded-full bg-orange/12 px-2 py-0.5 text-[10px] font-medium tracking-wide text-orange uppercase">New</span>}
+                  </div>
+                  <dd className="text-small text-muted">{b}</dd>
+                </div>
+              </div>
+            );
+          })}
         </dl>
-        <ButtonLink href="/book">Book a free class</ButtonLink>
+        <ButtonLink href="/book" className="mt-2">
+          Book a free class
+        </ButtonLink>
       </section>
 
       {/* Coaches */}
