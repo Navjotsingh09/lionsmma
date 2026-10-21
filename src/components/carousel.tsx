@@ -1,13 +1,27 @@
 'use client';
 
-import { Children, useRef, useState, type ReactNode } from 'react';
+import { Children, useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { cx } from './ui';
 
 /** Horizontal scroll-snap row with a Superpower-style progress indicator. */
-export function Carousel({ children, className, progress = true, label }: { children: ReactNode; className?: string; progress?: boolean; label: string }) {
+export function Carousel({
+  children,
+  className,
+  progress = true,
+  label,
+  auto,
+}: {
+  children: ReactNode;
+  className?: string;
+  progress?: boolean;
+  label: string;
+  /** Auto-advance interval in ms. Pauses on hover/focus/interaction. */
+  auto?: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const count = Children.count(children);
+  const paused = useRef(false);
 
   const onScroll = () => {
     const el = ref.current;
@@ -17,14 +31,36 @@ export function Carousel({ children, className, progress = true, label }: { chil
     setIndex(Math.min(count - 1, Math.round(el.scrollLeft / step)));
   };
 
-  const go = (i: number) => {
+  const go = useCallback((i: number) => {
     const el = ref.current;
     const child = el?.children[i] as HTMLElement | undefined;
     if (el && child) el.scrollTo({ left: child.offsetLeft - el.offsetLeft - (parseFloat(getComputedStyle(el).paddingLeft) || 0), behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    if (!auto || count < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const id = setInterval(() => {
+      if (paused.current) return;
+      const el = ref.current;
+      if (!el) return;
+      const first = el.firstElementChild as HTMLElement | null;
+      const step = first ? first.offsetWidth + 32 : el.clientWidth;
+      const current = Math.round(el.scrollLeft / step);
+      go((current + 1) % count);
+    }, auto);
+    return () => clearInterval(id);
+  }, [auto, count, go]);
+
+  const pause = () => {
+    paused.current = true;
+  };
+  const resume = () => {
+    paused.current = false;
   };
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" onMouseEnter={pause} onMouseLeave={resume} onFocusCapture={pause} onBlurCapture={resume} onPointerDownCapture={pause}>
       <div ref={ref} onScroll={onScroll} role="region" aria-label={label} tabIndex={0} className={cx('flex snap-x snap-mandatory overflow-x-auto scrollbar-none', className)}>
         {children}
       </div>

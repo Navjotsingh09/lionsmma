@@ -25,7 +25,13 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <PhotoHero photo="/photos/hero-fighter.jpg" alt="A young Sikh man in a black patka with orange hand wraps, in front of a glowing orange circle" preload>
+      <PhotoHero
+        photo="/photos/hero-video-poster.jpg"
+        video="/videos/hero.mp4"
+        alt="A boxer training in a dark urban gym"
+        preload
+        mobilePosition="object-center"
+      >
         <div className="flex flex-col gap-4 md:mb-[150px] md:max-w-[520px] md:gap-5">
           <p className="flex items-center gap-2 text-tiny text-white/90">
             <Icon name="check" size={14} /> Your first class is free
@@ -92,16 +98,16 @@ export default function HomePage() {
           <h2 className="text-h1-m md:text-h2">How it works</h2>
           <p className="text-small text-muted md:text-body">Start with a free class. Then train every week, close to home.</p>
         </div>
-        <ol className="flex gap-3 overflow-x-auto px-5 scrollbar-none md:gap-6 md:overflow-visible md:px-0">
+        <ol className="flex gap-4 overflow-x-auto px-5 scrollbar-none md:gap-6 md:overflow-visible md:px-0">
           {steps.map((s, i) => (
-            <li key={s.title} className="flex w-[220px] shrink-0 flex-col gap-3.5 md:w-[236px]">
-              <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image src={s.photo} alt="" fill sizes="236px" className="object-cover" />
-                <span className="absolute top-2.5 left-2.5 grid size-[22px] place-items-center rounded-md bg-white/80 text-tiny">{i + 1}</span>
+            <li key={s.title} className="flex w-[260px] shrink-0 flex-col gap-4 md:w-[290px]">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <Image src={s.photo} alt="" fill sizes="290px" className="object-cover" />
+                <span className="absolute top-3 left-3 grid size-7 place-items-center rounded-md bg-white/85 text-small">{i + 1}</span>
               </div>
               <div className="flex flex-col gap-1.5">
-                <h3 className="text-lead">{s.title}</h3>
-                <p className="text-small text-muted">{s.body}</p>
+                <h3 className="text-h4">{s.title}</h3>
+                <p className="text-body text-muted">{s.body}</p>
               </div>
             </li>
           ))}
@@ -134,19 +140,18 @@ export default function HomePage() {
           Led by coaches who give their
           <br className="hidden md:block" /> time to the community
         </h2>
-        <div className="flex gap-4 overflow-x-auto px-5 scrollbar-none md:gap-8 md:pl-[220px]">
-          {coaches.map((c, i) => (
-            <article key={c.name} className="flex shrink-0 flex-col gap-1.5 md:flex-row md:gap-5">
-              {i > 0 && <span className="hidden h-[180px] w-px bg-line md:block" />}
-              <div className="relative h-[280px] w-[240px] shrink-0 overflow-hidden rounded-lg md:h-[180px] md:w-[150px]">
-                <Image src={c.photo} alt={c.name} fill sizes="240px" className="object-cover" />
+        <div className="flex gap-5 overflow-x-auto px-5 scrollbar-none md:gap-7 md:pl-[220px] md:pr-10">
+          {coaches.map((c) => (
+            <article key={c.name} className="flex w-[280px] shrink-0 flex-col gap-4 md:w-[340px]">
+              <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-xl">
+                <Image src={c.photo} alt={c.name} fill sizes="340px" className="object-cover" />
               </div>
-              <div className="flex w-[240px] flex-col gap-1.5 md:w-[220px]">
-                <p className="text-tiny text-muted">{c.club}</p>
-                <h3 className="text-lead">{c.name}</h3>
+              <div className="flex flex-col gap-1.5">
+                <p className="text-small text-muted">{c.club}</p>
+                <h3 className="text-h4">{c.name}</h3>
                 <p className="text-small text-muted">{c.role}</p>
-                <p className="text-small">{c.body}</p>
-                <Link href={c.href} className="text-tiny underline-offset-4 hover:underline">
+                <p className="text-body">{c.body}</p>
+                <Link href={c.href} className="mt-1 text-small underline-offset-4 hover:underline">
                   See the timetable
                 </Link>
               </div>
@@ -167,15 +172,15 @@ export default function HomePage() {
           </h2>
           <p className="text-small text-muted md:text-body">Drug and alcohol awareness camps, and free martial arts in schools.</p>
         </div>
-        <Carousel label="Punjab projects" className="scroll-pl-5 gap-4 px-5 md:scroll-pl-[220px] md:gap-8 md:pl-[220px] md:pr-10">
+        <Carousel label="Punjab projects" auto={4500} className="scroll-pl-5 gap-5 px-5 md:scroll-pl-[220px] md:gap-8 md:pl-[220px] md:pr-10">
           {punjabStories.map((s) => (
-            <Link key={s.title} href="/punjab-projects" className="flex w-[300px] shrink-0 snap-start flex-col gap-3.5 md:w-[440px]">
-              <div className="relative aspect-[440/260] overflow-hidden rounded-lg">
-                <Image src={s.photo} alt="" fill sizes="440px" className="object-cover" />
+            <Link key={s.title} href="/punjab-projects" className="group flex w-[320px] shrink-0 snap-start flex-col gap-4 md:w-[560px]">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-xl">
+                <Image src={s.photo} alt="" fill sizes="560px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <p className="text-tiny text-muted">Punjab projects</p>
-              <h3 className="text-lead">{s.title}</h3>
-              <p className="text-small text-muted">{s.body}</p>
+              <p className="text-small text-muted">Punjab projects</p>
+              <h3 className="text-h4">{s.title}</h3>
+              <p className="text-body text-muted">{s.body}</p>
             </Link>
           ))}
         </Carousel>

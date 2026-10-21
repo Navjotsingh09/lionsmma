@@ -25,7 +25,7 @@ function MenuButton({ onClick, dark }: { onClick: () => void; dark?: boolean }) 
       type="button"
       onClick={onClick}
       aria-label="Open menu"
-      className={cx('grid size-9 place-items-center rounded-full transition-colors', dark ? 'bg-black/55 text-white glass hover:bg-black/70' : 'bg-black text-white hover:bg-ink/85')}
+      className={cx('grid place-items-center rounded-full transition-colors', dark ? 'size-11 bg-black/55 text-white glass hover:bg-black/70' : 'size-10 bg-black text-white hover:bg-ink/85')}
     >
       <GridIcon />
     </button>
@@ -41,20 +41,20 @@ function Pill({ onMenu, visible }: { onMenu: () => void; visible: boolean }) {
         visible ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0',
       )}
     >
-      <div className="flex items-center gap-2">
-        <div className="flex items-center gap-5 rounded-xl bg-black/55 py-1 pr-1 pl-4 text-tiny text-white/85 glass">
+      <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-7 rounded-full bg-black/55 py-2 pr-2 pl-7 text-small text-white/85 glass">
           {nav.slice(0, 4).map((l) => (
-            <Link key={l.href} href={l.href} className="hover:text-white">
+            <Link key={l.href} href={l.href} className="transition-colors hover:text-white">
               {l.label}
             </Link>
           ))}
           <Link href="/" aria-label="Lions MMA home" className="px-3">
-            <Logo width={48} color="white" />
+            <Logo width={60} color="white" />
           </Link>
-          <Link href="/faqs" className="hover:text-white">
+          <Link href="/faqs" className="transition-colors hover:text-white">
             FAQs
           </Link>
-          <ButtonLink href="/book" variant="white" className="!px-3.5 !py-1.5 !text-tiny">
+          <ButtonLink href="/book" variant="white" className="!rounded-full !px-5 !py-2.5 !text-small">
             Book a free class
           </ButtonLink>
         </div>
@@ -119,16 +119,16 @@ export function Header({ variant = 'bar' }: { variant?: 'bar' | 'overlay' }) {
       {variant === 'bar' ? (
         <header className="sticky top-0 z-30 bg-white md:static">
           {/* Desktop */}
-          <div className="hidden h-16 grid-cols-[1fr_auto_1fr] items-center px-10 md:grid">
-            <nav aria-label="Main" className="flex items-center gap-6 text-small">
+          <div className="hidden h-[76px] grid-cols-[1fr_auto_1fr] items-center px-10 md:grid">
+            <nav aria-label="Main" className="flex items-center gap-7 text-small">
               {nav.map((l) => (
-                <Link key={l.href} href={l.href} className="hover:text-muted">
+                <Link key={l.href} href={l.href} className="transition-colors hover:text-muted">
                   {l.label}
                 </Link>
               ))}
             </nav>
             <Link href="/" aria-label="Lions MMA home">
-              <Logo width={80} />
+              <Logo width={92} />
             </Link>
             <div className="flex items-center justify-end gap-4">
               <ButtonLink href="/book">Book a free class</ButtonLink>
