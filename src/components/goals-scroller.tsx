@@ -8,37 +8,70 @@ import { Accordion, cx } from './ui';
 /**
  * Superpower-style sticky section: the photo stays pinned while you scroll
  * through the four goals; the numbered tabs show where you are.
+ *
+ * The crossfade is driven directly by scroll position every frame (not by
+ * an IntersectionObserver threshold + CSS transition), so it tracks the
+ * scrubber exactly and never "pops" — that discrete jump is what reads as
+ * jerky. Opacity is set inline per-frame instead of toggled via class, and
+ * reads come from a single rAF-batched scroll listener to stay smooth.
  */
 export function GoalsScroller() {
   const [active, setActive] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
   const markers = useRef<(HTMLDivElement | null)[]>([]);
+  const frame = useRef<number | null>(null);
 
   useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) if (e.isIntersecting) setActive(Number((e.target as HTMLElement).dataset.i));
-      },
-      { rootMargin: '-50% 0px -50% 0px' },
-    );
-    markers.current.forEach((m) => m && io.observe(m));
-    return () => io.disconnect();
+    const n = goals.length;
+
+    const update = () => {
+      frame.current = null;
+      const el = sectionRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const slot = rect.height / n;
+      // Continuous position (0..n-1) of "now" within the stacked goal slots.
+      const raw = slot > 0 ? Math.min(n - 1, Math.max(0, -rect.top / slot)) : 0;
+
+      for (let i = 0; i < n; i++) {
+        const node = imageRefs.current[i];
+        if (node) node.style.opacity = String(Math.max(0, 1 - Math.abs(raw - i)));
+      }
+      setActive(Math.round(raw));
+    };
+
+    const onScroll = () => {
+      if (frame.current == null) frame.current = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame.current != null) cancelAnimationFrame(frame.current);
+    };
   }, []);
 
-  const jump = (i: number) => markers.current[i]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const jump = (i: number) => markers.current[i]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   const g = goals[active];
 
   return (
-    <section aria-label="Our goals" className="relative" style={{ height: `${goals.length * 100}svh` }}>
+    <section ref={sectionRef} aria-label="Our goals" className="relative" style={{ height: `${goals.length * 100}svh` }}>
       <div className="sticky top-0 h-svh overflow-hidden bg-black text-white">
         {goals.map((x, i) => (
-          <Image
+          <div
             key={x.photo}
-            src={x.photo}
-            alt=""
-            fill
-            sizes="100vw"
-            className={cx('object-cover transition-opacity duration-700', i === active ? 'opacity-100' : 'opacity-0')}
-          />
+            ref={(el) => {
+              imageRefs.current[i] = el;
+            }}
+            className="absolute inset-0"
+            style={{ opacity: i === 0 ? 1 : 0, willChange: 'opacity' }}
+          >
+            <Image src={x.photo} alt="" fill sizes="100vw" priority={i === 0} className="object-cover" />
+          </div>
         ))}
         <div
           aria-hidden="true"
