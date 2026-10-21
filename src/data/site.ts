@@ -20,7 +20,8 @@ export const goals = [
     title: 'Sikhi',
     heading: 'Train where you feel at home',
     body: 'Every Lions MMA club runs from Gurdwara premises — the Gurdwara itself, its gym or its community centre. Young Sikhs learn self-defence in a relaxed, family setting, and keep coming back to the Gurdwara.',
-    photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    // Real Lions MMA training hall with its Sikh-warrior mural (from lionsmma.net).
+    photo: 'https://images.squarespace-cdn.com/content/v1/5a04ac00be42d68a3d61ca75/1524861797601-20W9YOHFOYBOQTOWGYAZ/Lions+%286%29.jpg?format=2500w',
     faqs: [
       { q: 'Why do we train at the Gurdwara?', a: 'It gives Sikh youth a place to train among fellow Sikh brothers and sisters, somewhere they feel comfortable — and it encourages them to visit the Gurdwara.' },
       { q: 'Is it right for complete beginners?', a: 'Yes. Learning martial arts is something everyone can do. Classes are split by age and level.' },
