@@ -161,12 +161,12 @@ export default function HomePage() {
       </section>
 
       {/* Coaches */}
-      <section className="flex flex-col gap-8 pb-16 md:gap-12 md:pb-30">
-        <h2 className="px-5 text-h1-m md:pl-[220px] md:text-h1">
+      <section className="mx-auto flex w-full max-w-[1360px] flex-col gap-8 px-5 pb-16 md:gap-12 md:px-10 md:pb-30">
+        <h2 className="text-h1-m md:text-h1">
           Led by coaches who give their
           <br className="hidden md:block" /> time to the community
         </h2>
-        <div className="flex gap-5 overflow-x-auto px-5 scrollbar-none md:grid md:grid-cols-3 md:gap-7 md:overflow-visible md:pl-[220px] md:pr-10">
+        <div className="flex gap-5 overflow-x-auto scrollbar-none md:grid md:grid-cols-3 md:gap-7 md:overflow-visible">
           {coaches.map((c) => (
             <article key={c.name} className="flex w-[280px] shrink-0 flex-col gap-4 md:w-auto md:shrink">
               <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-xl">
