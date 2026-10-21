@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lions MMA & Boxing — website
 
-## Getting Started
+Next.js 16 (App Router, TypeScript, Tailwind 4) build of the website design in Figma (page “Website”). Content comes from lionsmma.net.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy (Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Import this repo in Vercel (**Add New → Project**). It detects Next.js — no settings needed. Every push to `main` redeploys.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Add these environment variables in Vercel when you’re ready (see `.env.example`):
 
-## Learn More
+| Variable | What it does |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | The live domain, for SEO and the sitemap |
+| `RESEND_API_KEY`, `ENQUIRIES_FROM`, `ENQUIRIES_TO` | Sends booking, contact and volunteer forms to the club by email. `ENQUIRIES_FROM` must use a domain verified in Resend. Until set, forms tell people to email info@lionsmma.net |
+| `DONATE_URL` | Where the Donate button goes (e.g. a Stripe Payment Link). Until set, it opens an email |
 
-To learn more about Next.js, take a look at the following resources:
+## Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Route | Page |
+|---|---|
+| `/` | Home |
+| `/clubs` | Find your club — search, filters, map |
+| `/clubs/[slug]` | One page per club (9), with timetable and booking |
+| `/classes` | Disciplines, Sikh heritage, values |
+| `/book` | Book a free class (`?club=willenhall` pre-selects a club) |
+| `/about` | Story, goals, stats |
+| `/punjab-projects` | #ABetterPunjab |
+| `/volunteer`, `/donate`, `/contact`, `/faqs` | |
+| `/privacy`, `/terms` | Drafts — need the club’s approval |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Where things live
 
-## Deploy on Vercel
+```
+src/data/clubs.ts   clubs, addresses, phone numbers, timetables  ← edit timetables here
+src/data/site.ts    page copy, FAQs, coaches, Punjab projects
+src/components/     header, footer, buttons, accordion, forms, map, timetable
+public/photos/      photos (AI stand-ins from the Figma file — replace with real ones)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## To confirm with the club before launch
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Photos** are AI stand-ins. Some show made-up club names on T-shirts and signs — replace them all with real photos.
+- **“Free first class”** — used across the site (from the design). Confirm the club offers this.
+- **Gradings** (home “How it works” and the membership table).
+- **First-class tips**: sportswear, arrive 10 minutes early, no kit needed.
+- **FAQ answers** in `src/data/site.ts`.
+- **Coach details** — names and classes come from the club list; Charandeep Singh is listed on the old site as the Bradford contact.
+- **Donations** — payment provider and whether Gift Aid applies.
+- **Privacy and Terms** pages are drafts.
+- Prices are deliberately not shown — the FAQ says each club explains prices at the first class.
