@@ -104,3 +104,16 @@
     transform: none;
   }
 }
+
+/* Text enters with a soft upward slide — matches the scrollytelling feel
+   where copy rises into place as each step settles. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
