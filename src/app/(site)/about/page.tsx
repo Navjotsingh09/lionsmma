@@ -22,15 +22,15 @@ export default function AboutPage() {
         </div>
       </PhotoHero>
 
-      <section className="flex flex-col gap-6 px-5 pt-12 md:flex-row md:gap-20 md:pt-24 md:pr-10 md:pl-[220px]">
-        <div className="flex flex-col gap-3.5 md:w-[400px] md:shrink-0">
+      <section className="mx-auto flex w-full max-w-[1360px] flex-col gap-6 px-5 pt-12 md:flex-row md:gap-16 md:px-10 md:pt-24">
+        <div className="flex flex-col gap-3.5 md:w-[360px] md:shrink-0">
           <p className="text-small text-muted">Our story</p>
           <h2 className="text-h1-m md:text-h1">
             A martial arts club
             <br className="hidden md:block" /> like no other
           </h2>
         </div>
-        <div className="flex max-w-[560px] flex-col gap-5">
+        <div className="flex max-w-[720px] flex-col gap-5">
           {story.map((p) => (
             <p key={p.slice(0, 20)} className="text-body md:text-lead">
               {p}
