@@ -63,7 +63,7 @@ export const goals = [
 ];
 
 export const steps = [
-  { photo: 'https://images.pexels.com/photos/5750886/pexels-photo-5750886.jpeg?auto=compress&cs=tinysrgb&w=1600', title: 'Find your club', body: 'Nine clubs, all on Gurdwara premises. Pick the one nearest you.' },
+  { photo: '/photos/step-find-club.jpg', title: 'Find your club', body: 'Nine clubs, all on Gurdwara premises. Pick the one nearest you.' },
   { photo: '/photos/step-free-class.jpg', title: 'Try a free class', body: 'Book online in a minute. No kit and no contract — just come as you are.' }, // CONFIRM: free first class
   { photo: '/photos/step-train-weekly.jpg', title: 'Train every week', body: 'Muay Thai, Jiu-Jitsu, boxing and MMA, split by age and level.' },
   { photo: '/photos/step-grade-grow.jpg', title: 'Grade and grow', body: 'Gradings mark every step. Confidence and discipline follow.' }, // CONFIRM: gradings
