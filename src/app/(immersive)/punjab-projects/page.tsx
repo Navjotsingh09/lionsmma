@@ -83,7 +83,7 @@ export default function PunjabPage() {
 
       <div className="px-2 pb-2">
         <section className="relative flex min-h-[520px] items-end overflow-hidden rounded-2xl bg-black text-white md:h-[600px] md:items-center">
-          <Image src="/photos/punjab-cta-dove.webp" alt="A young Sikh man holds up a white dove, symbolising hope for Punjab's youth" fill sizes="100vw" className="object-cover object-[70%_center]" />
+          <Image src="/photos/punjab-cta-dove.webp" alt="A young Sikh man holds up a white dove, symbolising hope for Punjab's youth" fill sizes="100vw" className="object-cover object-[65%_15%]" />
           <div aria-hidden="true" className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 80%)' }} />
           <div aria-hidden="true" className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 50%, rgba(0,0,0,.1) 100%)' }} />
           <div className="relative flex max-w-[560px] flex-col gap-4 p-5 md:gap-[18px] md:p-12">
