@@ -53,13 +53,13 @@ export default function PunjabPage() {
 
       <div className="grid gap-2.5 px-2 md:grid-cols-4">
         <div className="relative h-[260px] overflow-hidden rounded-xl md:col-span-2 md:h-[420px]">
-          <Image src="https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Teenagers training with a Sikh coach in a small gym in Punjab" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/photos/punjab-grid-training.webp" alt="Teenagers sparring with a coach holding pads in a Punjab gym" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="relative hidden h-[420px] overflow-hidden rounded-xl md:block">
-          <Image src="https://images.pexels.com/photos/13808098/pexels-photo-13808098.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Families in orange T-shirts on a charity fun run" fill sizes="25vw" className="object-cover" />
+          <Image src="/photos/punjab-grid-wraps.webp" alt="A young Sikh boxer wrapping his hands before training" fill sizes="25vw" className="object-cover" />
         </div>
         <div className="relative hidden h-[420px] overflow-hidden rounded-xl md:block">
-          <Image src="https://images.pexels.com/photos/16552800/pexels-photo-16552800.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Children practising martial arts on mats" fill sizes="25vw" className="object-cover" />
+          <Image src="/photos/punjab-grid-gloves.webp" alt="Close-up of a boxer's gloves raised ready to train" fill sizes="25vw" className="object-cover" />
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default function PunjabPage() {
 
       <div className="px-2 pb-2">
         <section className="relative flex min-h-[520px] items-end overflow-hidden rounded-2xl bg-black text-white md:h-[600px] md:items-center">
-          <Image src="https://images.pexels.com/photos/16552870/pexels-photo-16552870.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" fill sizes="100vw" className="object-cover" />
+          <Image src="/photos/punjab-cta-dove.webp" alt="A young Sikh man holds up a white dove, symbolising hope for Punjab's youth" fill sizes="100vw" className="object-cover object-[70%_center]" />
           <div aria-hidden="true" className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 80%)' }} />
           <div aria-hidden="true" className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 50%, rgba(0,0,0,.1) 100%)' }} />
           <div className="relative flex max-w-[560px] flex-col gap-4 p-5 md:gap-[18px] md:p-12">
