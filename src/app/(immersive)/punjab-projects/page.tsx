@@ -53,7 +53,7 @@ export default function PunjabPage() {
 
       <div className="grid gap-2.5 px-2 md:grid-cols-4">
         <div className="relative h-[260px] overflow-hidden rounded-xl md:col-span-2 md:h-[420px]">
-          <Image src="/photos/punjab-grid-training.webp" alt="Teenagers sparring with a coach holding pads in a Punjab gym" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/photos/punjab-grid-training.webp" alt="A teenager training pad work with his coach in a Punjab gym" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="relative hidden h-[420px] overflow-hidden rounded-xl md:block">
           <Image src="/photos/punjab-grid-wraps.webp" alt="A young Sikh boxer wrapping his hands before training" fill sizes="25vw" className="object-cover" />
